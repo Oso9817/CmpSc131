@@ -1,0 +1,37 @@
+from turtle import *
+from random import *
+colors = ['coral', 'gold', 'brown', 'red', 'green', 'blue', 'yellow', 'purple', 'orange', 'cyan', 'pink', 'magenta', 'goldenrod']
+sides1 = int(input("Enter the number of sides, less than 3 to exit: "))
+
+width = (sides1%20)+1
+sides = 360 / sides1
+length = 600/sides1
+
+#select random number 
+borderColor = randint(0, 12)
+fillColor = randint(0, 12)
+
+def makePolygon(sides, length, borderColor, width, fillColor):
+	#use random number to choose element in colors
+	#reset()
+	pencolor(colors[borderColor])
+	fillcolor(colors[fillColor])
+	begin_fill()
+	for count in range(sides1):
+		shape("turtle")
+	
+		pensize(width)
+		fd(length)
+		lt(sides)
+	end_fill()
+	#exitonclick()
+	#exit when you click
+
+while True:
+	if sides1 > 2:
+		reset()
+		makePolygon(sides, length, borderColor, width, fillColor)
+		sides1 = int(input("Enter the number of sides, less than 3 to exit: "))
+	else:
+		
+		break

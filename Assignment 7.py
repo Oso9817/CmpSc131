@@ -1,0 +1,10 @@
+data = open('random.txt', 'r+t')
+StringData = data.read()
+Data_List = StringData.split()
+Int_List = list(map(int, Data_List))
+for numbers in Int_List:
+	print(numbers)
+print(f'The total of the numbers is: {sum(Int_List)}')
+print(f'The file contained {len(Int_List)} numbers.')
+#print(type(test[4]))
+data.close()
